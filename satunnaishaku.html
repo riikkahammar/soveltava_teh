@@ -39,16 +39,9 @@
         <div>
             <button class = "btn btn-success mt-2" onclick = "getMovies()">Hae elokuva</button>
         </div>
-        <div id = "movieList" class = "row g-4 mt-4 d-flex flex-wrap"></div>
+        </br>
+        <div id="movieList" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"></div>
     </div>
-
-    <!-- Muotoillaan kortti yhtenäiseksi genrehaun kanssa -->
-    <style>
-        .movie-card {
-            flex: 0 0 20%;
-            max-width: 20%;
-        }
-    </style>
 
     <script>
         // Määritetään API-avain
@@ -80,7 +73,7 @@
             // Käytetään Bootstrapin kortti-toimintoa ja esitetään sillä saatu elokuvatulos
             // Elokuvasta näytetään posteri, nimi, julkaisuvuosi ja kuvausteksti, jos sellainen löytyy
             const card =
-                `<div class="movie-card p-2">
+                `<div class="col">
                     <div class="card h-100 shadow-sm">
                         <img src="${poster}" class="card-img-top" alt="${movie.title}">
                         <div class="card-body">
